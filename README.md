@@ -32,7 +32,7 @@ Uygulamanın şık koyu temalı giriş ve kayıt formları.
 
 | Giriş Yap | Kayıt Ol |
 | :---: | :---: |
-| <img src="giris_yap.png" width="350"/> | <img src="kayit_ol.png" width="350"/> |
+| <img src="giris_sayfasi.png" width="350"/> | <img src="kayit_sayfasi.png" width="350"/> |
 
 > **NOT:** Lütfen buradaki görüntü adlarını kendi yüklediğiniz dosyalarla eşleştirin (Örn: `Ekran Resmi 2025-09-29 17.24.32.png` -> `assets/giris_sayfasi.png`).
 > * **Giriş Yap:** `giris_sayfasi.png`
@@ -44,7 +44,7 @@ Giriş yapan kullanıcıyı karşılayan ve film türü seçimini sağlayan aray
 
 | Ana Sayfa (Hoş Geldiniz) | Kategori Seçimi |
 | :---: | :---: |
-| <img src="ana_sayfa.png" width="350"/> | <img src="kategori_sec.png" width="350"/> |
+| <img src="ana_sayfa.png" width="350"/> | <img src="kategori_secme_sayfasi.png" width="350"/> |
 
 > * **Ana Sayfa:** `ana_sayfa.png`
 > * **Kategori Seçimi:** `kategori_secme_sayfasi.png`
@@ -53,7 +53,7 @@ Giriş yapan kullanıcıyı karşılayan ve film türü seçimini sağlayan aray
 
 Seçilen türe göre sunulan film önerisi ekranı.
 
-<img src="film_onerisi.png" width="400"/>
+<img src="oneri_sayfasi.png" width="400"/>
 
 > * **Film Önerisi:** `oneri_sayfasi.png`
 
