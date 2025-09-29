@@ -57,6 +57,7 @@ Seçilen türe göre sunulan film önerisi ekranı.
 <img src="oneri_sayfasi.png" width="400"/> | <img src="film_detay.png" width="400"/>
 
 > * **Film Önerisi:** `oneri_sayfasi.png`
+> * **Film Detayı:** `film_detay.png`
 
 ### 4. Profil Sayfası
 
