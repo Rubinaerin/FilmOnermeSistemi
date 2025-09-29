@@ -81,4 +81,8 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
     ```bash
     python app.py
     ```
-4.  **Erişim:** Tarayıcınızı açın ve `http://127.0.0.1:5000` adresine gidin.
+    # Eğer yukarıdaki komut çalışmazsa ve Python 3 kullanıyorsanız:
+    ```bash
+    python3 app.py
+    ```
+5.  **Erişim:** Tarayıcınızı açın ve `http://127.0.0.1:5000` adresine gidin.
