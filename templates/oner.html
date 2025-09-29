@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container oner-sayfasi"> 
+    
+    <h1 class="main-title mb-5">Senin İçin Bir Film Önerisi!</h1>
+    
+    {% if film %}
+    <div class="card oner-card">
+        
+        <a href="{{ url_for('film_detay', film_id=film.FilmID) }}" class="film-link-wrapper">
+            <img src="{{ film.PosterURL }}" class="film-poster" alt="{{ film.Baslik }}">
+            
+            <div class="card-body">
+                <h2 class="film-title-oneri">{{ film.Baslik }}</h2>
+            </div>
+        </a>
+
+        <ul class="detay-list-oneri">
+            <li><strong>Yıl:</strong> <span>{{ film.Yil }}</span></li>
+            <li><strong>Türler:</strong> <span>{{ film.Turler }}</span></li>
+            <li>
+                <strong>IMDB Puanı:</strong> 
+                <span class="imdb-badge">{{ film.IMDBPuani }}</span>
+            </li>
+        </ul>
+
+        <div class="card-body buton-grup">
+            <form method="post" action="{{ url_for('izledim', film_id=film.FilmID) }}">
+                <button type="submit" class="btn ikincil-buton">Daha Önce İzledim</button>
+            </form>
+            <form method="post" action="{{ url_for('cevirdaha') }}">
+                <button type="submit" class="main-button">Biraz Daha Çevir</button>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <p class="error-message lead mt-5">Üzgünüm, şu an için film önerisi bulunamadı.</p>
+    {% endif %}
+
+    <div class="detay-nav">
+        <a href="{{ url_for('index') }}" class="link-style">Ana Sayfa</a>
+        <a href="{{ url_for('profile') }}" class="link-style">Profilim</a>
+        <a href="{{ url_for('logout') }}" class="link-style">Çıkış Yap</a>
+    </div>
+</div>
+{% endblock %}

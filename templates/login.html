@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container login-card-container"> 
+    
+    <div class="card login-card">
+        
+        <h1 class="main-title">Giriş Yap</h1>
+        
+        <form method="post" action="{{ url_for('login') }}">
+            
+            <div class="input-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="main-button">Giriş Yap</button>
+        </form>
+        
+        <p class="link-text mt-3">
+            Hesabın yok mu? 
+            <a href="{{ url_for('register') }}" class="link-style">Kayıt Ol</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

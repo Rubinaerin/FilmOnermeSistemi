@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card index-card-style"> 
+    
+    <h1 class="main-title">Merhaba, {{ kullanici_adi }}!</h1>
+    <p>Hangi türde bir film önerisi almak istersin?</p>
+
+    <div class="main-button-container">
+        <a href="{{ url_for('kategori_sec') }}" class="main-button">Film Önerisi Al</a>
+        <a href="{{ url_for('profile') }}" class="main-button ikincil-buton">Profilim</a>
+    </div>
+
+    <div class="detay-nav">
+        <a href="{{ url_for('logout') }}" class="link-style">Çıkış Yap</a>
+    </div>
+</div>
+{% endblock %}

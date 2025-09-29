@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container film-detay-container"> 
+    <div class="card detay-card">
+        
+        <div class="detay-content">
+            
+            <div class="detay-poster">
+                <img src="{{ film.PosterURL }}" alt="{{ film.Baslik }}">
+            </div>
+            
+            <div class="detay-info">
+                
+                <h1 class="main-title film-title">{{ film.Baslik }}</h1>
+                
+                <div class="info-section">
+                    <h5 class="info-heading">Film Detayları</h5>
+                    <ul class="detay-list">
+                        <li><strong>Yıl:</strong> {{ film.Yil }}</li>
+                        <li>
+                            <strong>IMDB Puanı:</strong> 
+                            <span class="imdb-badge">{{ film.IMDBPuani }}</span>
+                        </li>
+                        <li><strong>Türler:</strong> {{ film.Turler }}</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h5 class="info-heading">Konu</h5>
+                    <p class="detay-text">{{ overview }}</p>
+                </div>
+
+                {% if yonetmenler %}
+                    <div class="info-section">
+                        <h5 class="info-heading">Yönetmen(ler)</h5>
+                        <p class="detay-text">{{ yonetmenler|join(', ') }}</p>
+                    </div>
+                {% endif %}
+
+                {% if oyuncular %}
+                    <div class="info-section">
+                        <h5 class="info-heading">Başrol Oyuncuları</h5>
+                        <p class="detay-text">{{ oyuncular|join(', ') }}</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="detay-nav">
+            <a href="{{ url_for('index') }}" class="link-style">Ana Sayfa</a>
+            <a href="{{ url_for('profile') }}" class="link-style">Profilim</a>
+            <a href="{{ url_for('logout') }}" class="link-style">Çıkış Yap</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

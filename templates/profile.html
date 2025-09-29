@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container"> 
+    <h1 class="main-title mb-5">Merhaba, {{ kullanici_adi }}!</h1>
+    
+    <div class="profile-content">
+        
+        <div class="list-column">
+            <h2 class="list-title">Daha Önce İzlediğin Filmler</h2>
+            
+            {% if izlenen_filmler %}
+                <div class="film-list-group">
+                    {% for film in izlenen_filmler %}
+                    <a href="{{ url_for('film_detay', film_id=film.FilmID) }}" class="film-list-item-link">
+                        <div class="film-list-item">
+                            <img src="{{ film.PosterURL or url_for('static', filename='default_poster.png') }}" 
+                                 alt="{{ film.Baslik }} Posteri" 
+                                 class="poster-thumbnail">
+                            <div class="film-info">
+                                <strong class="film-title-small">{{ film.Baslik }}</strong> ({{ film.Yil }}) 
+                                <span class="film-score">Puan: {{ film.IMDBPuani or 'N/A' }}</span>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-list-message">Henüz izlediğin bir film yok.</p>
+            {% endif %}
+        </div>
+        
+        <div class="list-column">
+            <h2 class="list-title">Öneri Geçmişin</h2>
+            
+            {% if onerilen_filmler %}
+                <div class="film-list-group">
+                    {% for film in onerilen_filmler %}
+                    <a href="{{ url_for('film_detay', film_id=film.FilmID) }}" class="film-list-item-link">
+                        <div class="film-list-item">
+                            <img src="{{ film.PosterURL or url_for('static', filename='default_poster.png') }}" 
+                                 alt="{{ film.Baslik }} Posteri" 
+                                 class="poster-thumbnail">
+                            <div class="film-info">
+                                <strong class="film-title-small">{{ film.Baslik }}</strong> ({{ film.Yil }}) 
+                                <span class="film-score">Puan: {{ film.IMDBPuani or 'N/A' }}</span>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-list-message">Henüz bir öneri geçmişi bulunamadı.</p>
+            {% endif %}
+        </div>
+        
+    </div>
+    
+    <div class="detay-nav">
+        <a href="{{ url_for('index') }}" class="link-style">Ana Sayfa</a> 
+        <a href="{{ url_for('logout') }}" class="link-style">Çıkış Yap</a>
+    </div>
+</div>
+{% endblock %}

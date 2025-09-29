@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container"> 
+    <h1 class="main-title">Film Türü Seç</h1>
+    <p>Hangi türde film izlemek istersin?</p>
+
+    <form action="{{ url_for('oner_film_kategori') }}" method="get" class="kategori-form">
+        
+        <select name="kategori" class="kategori-select">
+            {% for kategori in kategoriler %}
+            <option value="{{ kategori }}">{{ kategori }}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit" class="main-button">Film Önerisi Al</button>
+    </form>
+
+    <div class="detay-nav">
+        <a href="{{ url_for('index') }}" class="link-style">Ana Sayfa</a>
+        <a href="{{ url_for('logout') }}" class="link-style">Çıkış Yap</a>
+    </div>
+</div>
+{% endblock %}
