@@ -34,7 +34,7 @@ Uygulamanın şık koyu temalı giriş ve kayıt formları.
 | :---: | :---: |
 | <img src="giris_sayfasi.png" width="350"/> | <img src="kayit_sayfasi.png" width="350"/> |
 
-> **NOT:** Lütfen buradaki görüntü adlarını kendi yüklediğiniz dosyalarla eşleştirin (Örn: `Ekran Resmi 2025-09-29 17.24.32.png` -> `assets/giris_sayfasi.png`).
+
 > * **Giriş Yap:** `giris_sayfasi.png`
 > * **Kayıt Ol:** `kayit_sayfasi.png`
 
@@ -52,8 +52,10 @@ Giriş yapan kullanıcıyı karşılayan ve film türü seçimini sağlayan aray
 ### 3. Film Önerisi ve Detay
 
 Seçilen türe göre sunulan film önerisi ekranı.
-
+| Film Önerisi | Film Detayı |
+| :---: | :---: |
 <img src="oneri_sayfasi.png" width="400"/>
+<img src="film_detay.png" width="400"/>
 
 > * **Film Önerisi:** `oneri_sayfasi.png`
 
