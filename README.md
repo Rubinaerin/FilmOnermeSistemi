@@ -81,7 +81,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
     ```bash
     python app.py
     ```
-    # Eğer yukarıdaki komut çalışmazsa ve Python 3 kullanıyorsanız:
+    **Eğer yukarıdaki komut çalışmazsa ve Python 3 kullanıyorsanız:
     ```bash
     python3 app.py
     ```
