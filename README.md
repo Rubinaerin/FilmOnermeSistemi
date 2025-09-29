@@ -54,8 +54,7 @@ Giriş yapan kullanıcıyı karşılayan ve film türü seçimini sağlayan aray
 Seçilen türe göre sunulan film önerisi ekranı.
 | Film Önerisi | Film Detayı |
 | :---: | :---: |
-<img src="oneri_sayfasi.png" width="400"/>
-<img src="film_detay.png" width="400"/>
+<img src="oneri_sayfasi.png" width="400"/> | <img src="film_detay.png" width="400"/>
 
 > * **Film Önerisi:** `oneri_sayfasi.png`
 
